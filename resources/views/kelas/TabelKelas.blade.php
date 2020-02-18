@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.all')
 
 @section('content')
 <div class="container-fluid">
@@ -27,7 +27,11 @@
                                 <td>{{$key+1}}</td>
                                 <td>{{$item->nama}}</td>
                                 <td>
-                                    <a href="" class="btn btn-xs btn-primary">Edit</a>
+                                <a href="{{url('kelas/edit')}}" class="btn btn-xs btn-primary">Edit</a>
+                                <form action="{{url('room/'.$item->id)}}" method="GET">
+                            
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                <button type="submit" class="btn badge-danger">Delete</button>
                                 </td>
                             </tr>
                             @endforeach

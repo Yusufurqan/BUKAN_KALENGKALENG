@@ -37,7 +37,7 @@ Route::group(['middleware'=>'auth'],function(){
     Route::group(['middleware'=>'checkAccount'],function(){
         Route::get('/home', 'HomeController@index')->name('home');
         Route::group(['prefix'=>'kelas'], function(){
-            Route::resource('/','KelasController');
+            Route::resource('Kelas/','KelasController');
             Route::post('/import','ImportController@importkelas');
         });
 
@@ -47,3 +47,4 @@ Route::group(['middleware'=>'auth'],function(){
 Route::namespace('Auth')->group(function(){
     Route::get('/activated-account','VerificationController@verifyToken');
 });
+

@@ -1,0 +1,53 @@
+body {
+   background: #282828;
+   font-family: tahoma;
+   color: #fff;
+}
+h1 {
+   margin: 20px 10%;
+   font-size: 60px;
+   letter-spacing: 10px;
+}
+
+#date{
+
+
+}
+.jumbotron{
+border: 10px;
+}
+#jam span {
+   float: left;
+   text-align: center;
+   font-size: 40px;
+  
+   width: 10%;
+   border-radius: 10px;
+   box-sizing: border-box;
+}
+#jam span:nth-child(1) {
+   background: #a70c0c;
+   border-radius: 50%;
+}
+#jam span:nth-child(2) {
+   border-radius: 50%;
+   background: #f6ab29;
+}
+#jam span:nth-child(3) {
+   background: #298f19;
+   border-radius: 50%;
+}
+
+#jam::after {
+   content: "";
+   display: block;
+   clear: both;
+}
+
+span.turn {
+   animation: turn 0.7s ease;
+}
+@keyframes turn {
+   0% {transform: rotateX(0deg)}
+   100% {transform: rotateX(360deg)}
+}
